@@ -19,23 +19,12 @@
             this.bands.forEach(function(band, currentPosition){
                 for (var newPosition = 0; newPosition < data.length; newPosition++) {
                     if (data[newPosition].name == band.name) {
-                        band.count = data[newPosition].count;
+                        $('.mentions .count', band.line).text(band.count = data[newPosition].count);
                         break;
                     }
                 }
 
-                $('.band', band.line).animate(
-                    {
-                        top: this.bands[newPosition].line.position().top - band.line.position().top,
-                        mentions: band.count
-                    },
-                    {
-                        duration:1000,
-                        progress: function(){
-                            $('.mentions .count', this).text(Math.round(this.mentions));
-                        }
-                    }
-                );
+                $('.band', band.line).css('top', this.bands[newPosition].line.position().top - band.line.position().top);
             }, this);
 
         }
