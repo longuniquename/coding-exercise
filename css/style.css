@@ -1,0 +1,48 @@
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+.bands ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #1d1d1d;
+    width: 440px;
+}
+.bands ul li {
+    border-top: 1px solid #3c3c3c;
+}
+.bands ul li:first-child {
+    border-top: none;
+}
+.bands .band {
+    padding: 0 25px;
+    white-space: nowrap;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.bands .band .name {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    width: 195px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bands .band .mentions {
+    font-size: 16px;
+    display: inline-block;
+    width: 195px;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bands .band .mentions .count {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
